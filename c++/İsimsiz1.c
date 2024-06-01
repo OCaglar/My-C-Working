@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   double x1,x2,y1,y2,a,b,c,d,X1,X2,Y1,Y2,a1,b1,c1,d1,Xa,Xb,Ya,Yb;
+   printf("\n\tHelmert-donusum_hesaplama_hosgeldiniz...");
+   printf("\n\t\aElinizdeki_mevcut_degerleri_girin...eger_o_deger_yoksa_0_yazýn...");
+   printf("\nx1=");
+   scanf("%lf",&x1);
+   printf("\nx2=");
+   scanf("%lf",&x2);
+   printf("\ny1=");
+   scanf("%lf",&y1);
+   printf("\ny2=");
+   scanf("%lf",&y2);
+   printf("\na=");
+   scanf("%lf",&a);
+   printf("\nb=");
+   scanf("%lf",&b);
+   printf("\nc=");
+   scanf("%lf",&c);
+   printf("\nd=");
+   scanf("%lf",&d);
+   printf("\nX1=");
+   scanf("%lf",&X1);
+   printf("\nX2=");
+   scanf("%lf",&X2);
+   printf("\nY1=");
+   scanf("%lf",&Y1);
+   printf("\nY2=");
+   scanf("%lf",&Y2);
+   if(a!=0&&b!=0&&c!=0&&d!=0&&x1!=0&&x2!=0&&y1!=0&&y2!=0&&X1==0&&X2==0&&Y1==0&&Y2==0)
+   {
+   	Xa=a*x1-b*y1+c;
+   	Ya=b*x1+a*y1+d;
+   	Xb=a*x2-b*y2+c;
+    Yb=b*x2+a*y2+d;
+    printf("\n\tDegerleriniz\nXa=%.2lf\nYa=%.2lf\nXb=%.2lf\nYb=%.2lf",Xa,Ya,Xb,Yb);
+}
+   
+   if(a==0&&b==0&&c==0&&d==0&&x1!=0&&x2!=0&&y1!=0&&y2!=0&&X1!=0&&X2!=0&&Y1!=0&&Y2!=0)
+    {
+	 a1=((x1-x2)*(X1-X2)+(y1-y2)*(Y1-Y2))/((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+     b1=((x1-x2)*(Y1-Y2)-(y1-y2)*(X1-X2))/((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+     c1=X1-a1*x1+b1*y1;
+     d1=Y1-b1*x1-a1*y1;
+     printf("\n\tDegerleriniz\na=%.2lf\nb=%.2lf\nc=%.2lf\nd=%.2lf",a1,b1,c1,d1);
+}
+   else
+   {
+	printf("\nHatalý_sayý_girdiniz.Degerleri_kontrol_edin...");
+   }
+}
